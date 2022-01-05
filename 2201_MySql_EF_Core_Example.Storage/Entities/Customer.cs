@@ -17,7 +17,7 @@ namespace _2201_MySql_EF_Core_Example.Storage.Entities
 
         [Required]
         [StringLength(128)]
-        public int Name { get; set; }
+        public string Name { get; set; }
 
 
         [ForeignKey("CustomerId")]

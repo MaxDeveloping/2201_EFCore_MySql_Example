@@ -10,8 +10,8 @@ using _2201_MySql_EF_Core_Example.Storage.Contexts;
 namespace _2201_MySql_EF_Core_Example.Storage.Migrations
 {
     [DbContext(typeof(StorageContext))]
-    [Migration("20220105160500_CountryPropAdded")]
-    partial class CountryPropAdded
+    [Migration("20220105233221_InitDatabase")]
+    partial class InitDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,14 +26,10 @@ namespace _2201_MySql_EF_Core_Example.Storage.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("Country")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(128)
                         .HasColumnType("varchar(128)");
-
-                    b.Property<int>("Name")
-                        .HasMaxLength(128)
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

@@ -24,9 +24,10 @@ namespace _2201_MySql_EF_Core_Example.Storage.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("Name")
+                    b.Property<string>("Name")
+                        .IsRequired()
                         .HasMaxLength(128)
-                        .HasColumnType("int");
+                        .HasColumnType("varchar(128)");
 
                     b.HasKey("Id");
 
